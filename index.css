@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    /* padding: 0; */
+}
+ body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0ecf1e8d;
+ }
+.containerItem{
+    flex: 1 0 auto;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(10, 0, 19, 0.144);
+    box-sizing: border-box;
+    opacity: 0;
+    transform: scale(0.1); 
+    transition: opacity 0.0006s ease, transform 0.0006s;
+}
+
+.containerItem.show{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 800px;
+    margin: 11px;
+    border: 9px solid rgba(0, 9, 19, 0.741);
+    border-radius: 8px;
+    background-color: aliceblue;
+}
+.hovered{
+    background-color: black;
+}
+.btn{
+    cursor: pointer;
+    height: 45px;
+    width: 90px;
+    border-radius: 7px;
+    margin: 12px;
+    background-color: #ccc9e84e;
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    justify-content: space-between;
+}
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.gridButton{
+    height: 45px;
+    width: 190px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #ccc9e84e;
+}
+h1{
+    margin-bottom: 24px;
+    font-size: 43px;
+    color: #e8e6c9;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
