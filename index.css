@@ -39,11 +39,12 @@
 }
 .btn{
     cursor: pointer;
-    height: 45px;
-    width: 90px;
-    border-radius: 7px;
+    height: 130px;
+    width: 200px;
     margin: 12px;
-    background-color: #ccc9e84e;
+    background-color: RGB(123,200,2);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    border: none;
 }
 .btns{
     display: flex;
