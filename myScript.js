@@ -5,6 +5,10 @@ const normalColor = document.querySelector(".normalColor");
 const gridButton = document.querySelector(".gridButton");
 
 
+function getGridItems(){
+    return document.querySelectorAll(".containerItem");
+}
+
 function changeColor(){
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
@@ -13,7 +17,7 @@ function changeColor(){
 }
 
 function createRandomColor (){
-    const gridDivs = document.querySelectorAll(".containerItem");
+    const gridDivs = getGridItems()
     gridDivs.forEach(div => {
         div.addEventListener('mouseover', () =>{
             div.style.background = changeColor();
@@ -22,8 +26,9 @@ function createRandomColor (){
     })
 }
 
+
 function getOriginalColor(){
-    const gridDivs = document.querySelectorAll(".containerItem");
+    const gridDivs = getGridItems();
     gridDivs.forEach(div => {
         div.addEventListener('mouseover', () =>{
             div.style.backgroundColor = "black";
@@ -52,7 +57,7 @@ function changeGrid(){
 
 
 
-    const gridDivs = document.querySelectorAll(".containerItem");
+    const gridDivs = getGridItems();
     gridDivs.forEach(div =>{
             div.style.width = `calc(100% / ${size})`;
             div.style.height = `calc(100% / ${size})`;
@@ -65,7 +70,7 @@ function changeGrid(){
 // These five lines of code create the grid
 
 function addHoverEffect(){
-    const gridDivs = document.querySelectorAll(".containerItem");
+    const gridDivs = getGridItems();
     gridDivs.forEach(div =>{
     div.addEventListener('mouseover', () =>{
         div.classList.add("hovered");
@@ -74,7 +79,7 @@ function addHoverEffect(){
 }
 
 function erase (){
-    const gridDivs = document.querySelectorAll(".containerItem");
+    const gridDivs = getGridItems();
     gridDivs.forEach(div =>{
         div.classList.remove("hovered");
         div.style.backgroundColor = "";
