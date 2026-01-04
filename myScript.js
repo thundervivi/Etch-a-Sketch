@@ -16,7 +16,6 @@ function createRandomColor (){
     const gridDivs = document.querySelectorAll(".containerItem");
     gridDivs.forEach(div => {
         div.addEventListener('mouseover', () =>{
-            div.classList.add("randomColor");
             div.style.background = changeColor();
         })
         
@@ -40,14 +39,14 @@ function changeGrid(){
     }else{
         containerGrid.innerHTML = '';
 
-    for (let i= 0; i < size*size; i++){
+    for (let i= 0; i < size * size; i++){
         const containerItem = document.createElement("div");
         containerItem.classList.add("containerItem");
         containerGrid.appendChild(containerItem);
 
         setTimeout(()=> {
             containerItem.classList.add("show");
-        });
+        } ,i * 2);
         
     }
 
@@ -80,11 +79,6 @@ function erase (){
         div.classList.remove("hovered");
         div.style.backgroundColor = "";
     })
-}
-for (let i= 0; i < 1000; i++){
-    const containerItem = document.createElement("div");
-    containerItem.classList.add("containerItem");
-    containerGrid.appendChild(containerItem);
 }
 
 addHoverEffect();
